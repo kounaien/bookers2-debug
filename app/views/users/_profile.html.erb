@@ -24,7 +24,7 @@
 </table>
 
 <div class="row">
-	<% unless user != current_user %>
+	<% unless user == current_user %>
 		<% if current_user.following?(user) %>
 			<%= link_to 'フォローを外す', unfollow_path(user.id), method: :post, class: "btn btn-primary col-xs-6" %>
 		<% else %>
